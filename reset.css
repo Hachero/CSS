@@ -1,0 +1,102 @@
+/*
+  Resets: By Michael Bates
+  _________________________________________
+  see notes in the Readme
+*/
+
+* { box-sizing: border-box; position: relative; padding: 0; margin: 0;
+    /* border: 1px solid rgba(0, 255, 50, 0.9)!important; */
+}
+
+/* link underline */
+a
+{ text-decoration: none !important; }
+
+/* Input Resets */
+input[type="button"], input[type="reset"], input[type="submit"]
+{ cursor: pointer; }
+
+button:focus, input:focus, textarea:focus, a:focus
+{ outline: 0; }
+
+input[type="date"]:focus, input[type="email"]:focus, input[type="month"]:focus,
+input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus,
+input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus,
+input[type="url"]:focus, input[type="week"]:focus
+{ box-shadow: inset -2px -1px 5px rgba(50, 50, 50, 0.8); }
+
+input[type="date"], input[type="email"], input[type="month"], input[type="number"],
+input[type="password"], input[type="search"], input[type="tel"], input[type="text"],
+input[type="time"], input[type="url"], input[type="week"]
+{ font-size: 1.1rem; font-family: inherit; border: none; padding: 2px 7px 1px 8px;  background-color: white; }
+
+/* List Styles */
+ol, ul { list-style: none; }
+
+/*  Button and Link Styles  */
+a:active,
+button:active {
+    text-shadow: 1px 1px 1px rgba(230, 230, 230, 0.25);
+}
+
+button {
+    flex: 1 0 auto;
+    align-items: baseline;
+    display: inline-block;
+    min-height: 35px;
+    /* margin and padding */
+    margin: 15px;
+    padding: 5px 15px 5px 15px;
+    /* background properties */
+    background-color: inherit;
+    /* text properties */
+    font-family: inherit;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: initial;
+    text-transform: none;
+    text-indent: 0px;
+    /* text-shadow: initial; */
+    text-rendering: auto;
+    letter-spacing: 1.2px;
+    word-spacing: normal;
+    /* cursor */
+    cursor: pointer;
+    /* border Properties */
+    border: initial;
+    border-image: initial;
+    border-radius: 3px;
+    /* display properties */
+    appearance: button;
+    /* vendor prefixed properties not supported in Chrome@latest */
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+h1, h2, h3, h4, h5, h6
+{ display: block; font-size: inherit; font-weight: inherit; }
+h1, h2, h3, h4, h5, h6
+{ -webkit-margin-before: inherit; -webkit-margin-after: inherit; -webkit-margin-start: inherit; -webkit-margin-end: inherit; }
+
+/* Body Styles */
+body {
+    overflow-x: auto;
+    overflow-y: auto;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    vertical-align: baseline;
+    border: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    background: rgba(0, 0, 0, 0.1);
+}
