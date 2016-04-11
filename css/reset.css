@@ -1,50 +1,133 @@
 /*
   Resets: By Michael Bates
   _________________________________________
-  This is basically set up to override any of Chrome's default handling.  Although the idea of
-  CSS resets is not my own; the versions on the web have little in common with mine.
-  Essentially, there is nothing here specifically intended to support older browsers.  This is
-  strictly written for the current version of the Chrome browser.  Unfortunately Chrome still
-  has some -webkit crap, which requires some prefixing. This is why there are prefixed properties
-  in the resets (buttons).  As I continue styling items; this will grow.  My intension is to see
-  every "user agent stylesheet" style crossed off in dev tools.  This way, I know that all styles
-  are those I've specifically chosen.  Hence my resets bare little resemblence to other resets.
-  _________________________________________
-  About using '*' wildcard: I've read it's slower... I don't care.  It does what I want.  I have
-  the border outline commented, which can be toggled on and off so that I can easily get a visual
-  reference to elements in my page.  It's a handy tool for me.
+  see notes in the Readme
 */
 
-* { box-sizing: border-box; position: relative; padding: 0; margin: 0;
+* {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    margin: 0;
     /* border: 1px solid rgba(0, 255, 50, 0.9)!important; */
 }
 
+
 /* link underline */
-a
-{ text-decoration: none !important; }
+
+a {
+    text-decoration: none !important;
+}
+
 
 /* Input Resets */
-input[type="button"], input[type="reset"], input[type="submit"]
-{ cursor: pointer; }
 
-button:focus, input:focus, textarea:focus, a:focus
-{ outline: 0; }
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
 
-input[type="date"]:focus, input[type="email"]:focus, input[type="month"]:focus,
-input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus,
-input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus,
-input[type="url"]:focus, input[type="week"]:focus
-{ box-shadow: inset -2px -1px 5px rgba(50, 50, 50, 0.8); }
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
+    outline: 0;
+}
 
-input[type="date"], input[type="email"], input[type="month"], input[type="number"],
-input[type="password"], input[type="search"], input[type="tel"], input[type="text"],
-input[type="time"], input[type="url"], input[type="week"]
-{ font-size: 1.1rem; font-family: inherit; border: none; padding: 2px 7px 1px 8px;  background-color: white; }
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+    box-shadow: inset -2px -1px 5px rgba(50, 50, 50, 0.8);
+}
+
+input[type="date"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: rgba(0, 20, 72, 1.0);
+    border: none;
+    padding: 2px 7px 1px 8px;
+    background-color: white;
+}
+
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+    padding: initial;
+    border-width: 0;
+    border-style: inset;
+    border-color: initial;
+}
+
+input,
+textarea,
+keygen,
+select,
+button {
+    text-rendering: inherit;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: inherit;
+    text-shadow: none;
+    display: inline-block;
+    text-align: initial;
+    margin: 0px;
+    font: 1rem 'Lato';
+}
+
+input::-webkit-input-placeholder {
+    line-height: inherit;
+    white-space: pre;
+    word-wrap: normal;
+    -webkit-user-modify: read-only;
+    overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+    -webkit-text-security: none;
+    color: rgba(20, 20, 20, 0.85) !important;
+    pointer-events: none;
+}
+
 
 /* List Styles */
-ol, ul { list-style: none; }
+
+ol,
+ul {
+    list-style: none;
+}
+
 
 /*  Button and Link Styles  */
+
 a:active,
 button:active {
     text-shadow: 1px 1px 1px rgba(230, 230, 230, 0.25);
@@ -89,15 +172,37 @@ button {
     -webkit-writing-mode: horizontal-tb !important;
 }
 
-h1, h2, h3, h4, h5, h6
-{ display: block; font-size: inherit; font-weight: inherit; }
-h1, h2, h3, h4, h5, h6
-{ -webkit-margin-before: inherit; -webkit-margin-after: inherit; -webkit-margin-start: inherit; -webkit-margin-end: inherit; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-margin-before: inherit;
+    -webkit-margin-after: inherit;
+    -webkit-margin-start: inherit;
+    -webkit-margin-end: inherit;
+}
+
 
 /* Body Styles */
+
 body {
     overflow-x: auto;
     overflow-y: auto;
+    color: white;
     font-family: Lato, sans-serif;
     font-weight: 300;
     vertical-align: baseline;
@@ -109,5 +214,5 @@ body {
     margin: 0;
     padding: 0;
     word-wrap: break-word;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.5);
 }
