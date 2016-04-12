@@ -1,0 +1,79 @@
+/*
+ ____ ____ ____ ____ ___________ ____ ____ ____ ____
+||M |||i |||k |||e |||         |||D |||o |||w |||n ||
+||__|||__|||__|||__|||_________|||__|||__|||__|||__||
+|/__\|/__\|/__\|/__\|/_________\|/__\|/__\|/__\|/__\|
+
+   ___  __   __      __  ______ _  _ __     ____  __
+  //   (( \ (( \    (( \ | || | \\// ||    ||    (( \
+ ((     \\   \\      \\    ||    )/  ||    ||==   \\
+  \\__ \_)) \_))    \_))   ||   //   ||__| ||___ \_))
+
+*/
+
+
+/* Modal popover */
+
+.modalDialog {
+    position: fixed;
+    font-family: 'Source Sans Pro';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 80;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+div.modalContentContainer p {
+    font-size: 14px;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 557px;
+    height: 200px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    margin: 7% auto;
+    padding: 10px;
+    border-radius: 0;
+    background: rgba(230, 230, 230, 0.95);
+    overflow: hidden;
+    border: none;
+}
+
+.close {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 0;
+  background: rgb(50, 50, 50);
+  box-shadow: -1px -1px 1.5px rgba(150, 150, 150, 0.85);
+}
+
+.close:hover {
+    background-color: transparent;
+    border: thin solid rgba(80, 80, 80, 0.15);
+    color: transparent;
+    text-shadow: 0 0 0 black;
+}
+
+.modalLink {
+
+}
